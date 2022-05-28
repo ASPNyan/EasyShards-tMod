@@ -2,6 +2,7 @@ displayName = EasyShards
 author = Nyan
 version = 1.0.0
 hideCode = false
+homepage = https://github.com/ASPNyan/EasyShards-tMod
 hideResources = false
 includeSource = true
 buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*, *.gitignore
