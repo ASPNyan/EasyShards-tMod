@@ -1,0 +1,33 @@
+Sick of farming for Dark & Light Shards? Yeah same, so instead of taking the time to grind out the Shards I made this mod so you can craft them, and convert one to the other!
+
+This is a very light mod, since it only contains a couple recipes (Hell, the biggest file in the mod is the icon :shrug:), so it'll run with very, *very* minimal performance decrease (aka none).
+
+Recipes:
+ - 1 Light Shard
+  • 15 Pearlstone Blocks
+  • 15 Purity/Hallowed Sand
+  • 3 Pixie Dust
+  @ a Mythril Anvil
+
+ - 1 Dark Shard (Crimson Variant)
+  • 15 Crimstone Blocks
+  • 15 Crimsand 
+  • 3 Vertebrae
+  @ a Mythril Anvil
+
+ - 1 Dark Shard (Corruption Variant)
+  • 15 Ebonstone Blocks
+  • 15 Ebonsand 
+  • 3 Rotten Chunks
+  @ a Mythril Anvil
+
+ - 2 Light Shards to 2 Dark Shards
+  • 2 Light Shards
+  • 1 Evil Spreader (e.g. Red Solution, Vile Water, Vicious Powder, etc.)
+  @ a Mythril Anvil
+
+ - 2 Dark Shards to 2 Light Shards
+  • 2 Dark Shards
+  • 1 Pure/Holy Spreader (e.g. Green Solution, Holy Water, Purification Powder, etc.)
+
+Have fun not having to grind for these :)
