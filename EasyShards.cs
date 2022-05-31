@@ -24,7 +24,7 @@ namespace EasyShards
                 ItemID.EbonsandBlock
 			});
 	        RecipeGroup.RegisterGroup("EasyShards:EvilSands", evilSand);
-
+ 
 			RecipeGroup evilStone = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Evil Stone", new int[]
     	    {
 	    	    ItemID.CrimstoneBlock,
@@ -46,16 +46,22 @@ namespace EasyShards
 			RecipeGroup pureSpreader = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Pure/Holy Spreader", new int[]
     	    {
 	    	    ItemID.PurificationPowder,
-		        ItemID.ViciousPowder,
 				ItemID.GreenSolution,
 				ItemID.BlueSolution,
 				ItemID.HolyWater
     	    });
 	        RecipeGroup.RegisterGroup("EasyShards:PureHolySpreaders", pureSpreader);
+
+			RecipeGroup evilDrop = new RecipeGroup(() => "Vertebrae or Rotten Chunk", new int[] {
+				ItemID.Vertebrae,
+				ItemID.RottenChunk
+			});
+			RecipeGroup.RegisterGroup("EasyShards:EvilDrop", evilDrop);
         }
 
         public override void AddRecipes()
         {
+			
             ModRecipe recipe = new ModRecipe(this);
             recipe.AddIngredient(ItemID.PearlstoneBlock, 15);
             recipe.AddRecipeGroup("EasyShards:Non-EvilSands", 15);
@@ -68,16 +74,7 @@ namespace EasyShards
 			recipe = new ModRecipe(this);
             recipe.AddRecipeGroup("EasyShards:EvilStones", 15);
             recipe.AddRecipeGroup("EasyShards:EvilSands", 15);
-			recipe.AddIngredient(ItemID.Vertebrae, 3);
-			recipe.AddIngredient(ItemID.SoulofNight, 1);
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(ItemID.DarkShard, 1);
-			recipe.AddRecipe();
-
-			recipe = new ModRecipe(this);
-            recipe.AddRecipeGroup("EasyShards:EvilStones", 15);
-            recipe.AddRecipeGroup("EasyShards:EvilSands", 15);
-			recipe.AddIngredient(ItemID.RottenChunk, 3);
+			recipe.AddRecipeGroup("EasyShards:EvilDrop", 3);
 			recipe.AddIngredient(ItemID.SoulofNight, 1);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(ItemID.DarkShard, 1);
