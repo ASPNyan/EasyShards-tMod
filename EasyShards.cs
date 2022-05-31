@@ -5,7 +5,7 @@ using Terraria.Localization;
 
 namespace EasyShards
 {
-    public class EasyShards : Mod
+    public class EasyShards : ModSystem
     {
     
 
@@ -59,40 +59,35 @@ namespace EasyShards
 			RecipeGroup.RegisterGroup("EasyShards:EvilDrop", evilDrop);
         }
 
-        public override void AddRecipes()
-        {
-			
-            ModRecipe recipe = new ModRecipe(this);
-            recipe.AddIngredient(ItemID.PearlstoneBlock, 15);
-            recipe.AddRecipeGroup("EasyShards:Non-EvilSands", 15);
-			recipe.AddIngredient(ItemID.PixieDust, 3);
-			recipe.AddIngredient(ItemID.SoulofLight, 1);
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(ItemID.LightShard, 1);
-			recipe.AddRecipe();
+        public override void AddRecipes() {
+				
+            Recipe lightShard = Mod.CreateRecipe(ItemID.LightShard, 1);
+            lightShard.AddIngredient(ItemID.PearlstoneBlock, 15);
+            lightShard.AddRecipeGroup("EasyShards:Non-EvilSands", 15);
+			lightShard.AddIngredient(ItemID.PixieDust, 3);
+			lightShard.AddIngredient(ItemID.SoulofLight, 1);
+			lightShard.AddTile(TileID.MythrilAnvil);
+			lightShard.Register();
 
-			recipe = new ModRecipe(this);
-            recipe.AddRecipeGroup("EasyShards:EvilStones", 15);
-            recipe.AddRecipeGroup("EasyShards:EvilSands", 15);
-			recipe.AddRecipeGroup("EasyShards:EvilDrop", 3);
-			recipe.AddIngredient(ItemID.SoulofNight, 1);
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(ItemID.DarkShard, 1);
-			recipe.AddRecipe();
+			Recipe darkShard = Mod.CreateRecipe(ItemID.DarkShard, 1);
+			darkShard.AddRecipeGroup("EasyShards:EvilStones", 15);
+            darkShard.AddRecipeGroup("EasyShards:EvilSands", 15);
+			darkShard.AddRecipeGroup("EasyShards:EvilDrop", 3);
+			darkShard.AddIngredient(ItemID.SoulofNight, 1);
+			darkShard.AddTile(TileID.MythrilAnvil);
+			darkShard.Register();
 
-			recipe = new ModRecipe(this);
-			recipe.AddRecipeGroup("EasyShards:EvilSpreaders", 1);
-			recipe.AddIngredient(ItemID.LightShard, 2);
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(ItemID.DarkShard, 2);
-			recipe.AddRecipe();
+			Recipe lightToDark = Mod.CreateRecipe(ItemID.DarkShard, 2);
+			lightToDark.AddRecipeGroup("EasyShards:EvilSpreaders", 1);
+			lightToDark.AddIngredient(ItemID.LightShard, 2);
+			lightToDark.AddTile(TileID.MythrilAnvil);
+			lightToDark.Register();
 
-			recipe = new ModRecipe(this);
-			recipe.AddRecipeGroup("EasyShards:PureHolySpreaders", 1);
-			recipe.AddIngredient(ItemID.DarkShard, 2);
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(ItemID.LightShard, 2);
-			recipe.AddRecipe();
+			Recipe darkToLight = Mod.CreateRecipe(ItemID.LightShard, 2);
+			darkToLight.AddRecipeGroup("EasyShards:PureHolySpreaders", 1);
+			darkToLight.AddIngredient(ItemID.DarkShard, 2);
+			darkToLight.AddTile(TileID.MythrilAnvil);
+			darkToLight.Register();
         }
     }
 }
