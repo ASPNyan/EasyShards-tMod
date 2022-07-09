@@ -27,3 +27,7 @@ Recipes:
   • 1 Pure/Holy Spreader (e.g. Green Solution, Holy Water, Purification Powder, etc.)
 
 Have fun not having to grind for these :)
+
+Changelog:
+  [c/ff00ff:1.0.1]:
+    • Update code to work with recent updates 

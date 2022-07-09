@@ -61,7 +61,7 @@ namespace EasyShards
 
         public override void AddRecipes() {
 				
-            Recipe lightShard = Mod.CreateRecipe(ItemID.LightShard, 1);
+            Recipe lightShard = Recipe.Create(ItemID.LightShard, 1);
             lightShard.AddIngredient(ItemID.PearlstoneBlock, 15);
             lightShard.AddRecipeGroup("EasyShards:Non-EvilSands", 15);
 			lightShard.AddIngredient(ItemID.PixieDust, 3);
@@ -69,7 +69,7 @@ namespace EasyShards
 			lightShard.AddTile(TileID.MythrilAnvil);
 			lightShard.Register();
 
-			Recipe darkShard = Mod.CreateRecipe(ItemID.DarkShard, 1);
+			Recipe darkShard = Recipe.Create(ItemID.DarkShard, 1);
 			darkShard.AddRecipeGroup("EasyShards:EvilStones", 15);
             darkShard.AddRecipeGroup("EasyShards:EvilSands", 15);
 			darkShard.AddRecipeGroup("EasyShards:EvilDrop", 3);
@@ -77,13 +77,13 @@ namespace EasyShards
 			darkShard.AddTile(TileID.MythrilAnvil);
 			darkShard.Register();
 
-			Recipe lightToDark = Mod.CreateRecipe(ItemID.DarkShard, 2);
+			Recipe lightToDark = Recipe.Create(ItemID.DarkShard, 2);
 			lightToDark.AddRecipeGroup("EasyShards:EvilSpreaders", 1);
 			lightToDark.AddIngredient(ItemID.LightShard, 2);
 			lightToDark.AddTile(TileID.MythrilAnvil);
 			lightToDark.Register();
 
-			Recipe darkToLight = Mod.CreateRecipe(ItemID.LightShard, 2);
+			Recipe darkToLight = Recipe.Create(ItemID.LightShard, 2);
 			darkToLight.AddRecipeGroup("EasyShards:PureHolySpreaders", 1);
 			darkToLight.AddIngredient(ItemID.DarkShard, 2);
 			darkToLight.AddTile(TileID.MythrilAnvil);
